@@ -1,0 +1,30 @@
+body {
+    background-color: #f2f2f2;
+
+}
+
+.makecenter {
+    display: flex;
+    /* align-items: center; */
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons > button {
+    justify-content: center;
+    width: 150px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+input {
+    margin-bottom: 30px;
+}
