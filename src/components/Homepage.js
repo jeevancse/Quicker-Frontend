@@ -8,7 +8,14 @@ import { Button } from "@material-ui/core";
 import  Homepagecontent   from "./Homepagecontent";
 import { Container } from "@material-ui/core";
 import { ToastContainer, toast } from "react-toastify";
-
+import {
+  Typography,
+  Grid,
+  TextField,
+  InputLabel,
+  Box,
+  FormControl,
+} from "@material-ui/core";
 // import 'second.png'
 //
 
@@ -17,7 +24,7 @@ export default function Homepage() {
     {
       image: first,
       alt: "first image",
-      Text: "Welcome to Quicker. Lets Do Something Creative",
+      Text: "Welcome to Quicker",
       width: "100%",
     },
     {
@@ -53,13 +60,14 @@ export default function Homepage() {
   return (
     <>
       <Navbar />
-      <div className="ankit-slider">
+      <Box className="body">
+      <div className="jeevan-slider">
       {/* <ToastContainer/> */}
         <div className="slider">
           {image.map((children, index) => (
-            <div key={index}>
+            <div >
               <img
-                
+                key={index}
                 className="image"
                 src={children.image}
                 alt={children.alt}
@@ -67,7 +75,7 @@ export default function Homepage() {
                 style={{ transform: `translateX(${x}%)` }}
               />
               <h2   className="text-over-image">{children.Text}</h2>
-              <h1  className="text-over-image">Quicker :)</h1>
+              {/* <h1  className="text-over-image">Quicker :)</h1> */}
 
             </div>
           ))}
@@ -79,7 +87,9 @@ export default function Homepage() {
         &raquo;
         </button>
       </div>
+      </Box>
       <Homepagecontent/>
+
     </>
   );
 }

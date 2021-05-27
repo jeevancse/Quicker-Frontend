@@ -9,6 +9,7 @@ import {
   Typography,
   Grid,
   TextField,
+  Box,
   Button,
   Container,
 } from "@material-ui/core";
@@ -64,6 +65,7 @@ export default function Homepagecontent() {
             <Grid container spacing={5}  className={classes.box}  >  
               <Grid container item md={3} sm={3} key={index} className={classes.flex}>
                 <img src={item.image} className={classes.paper}  />
+                {/* <Typography variant="h6" align="center">Dell Laptop</Typography> */}
               </Grid>
               <Grid container item md={3} sm={3} key={index} className={classes.flex}>
                 <img src={item.image} className={classes.paper} />

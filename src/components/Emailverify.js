@@ -33,7 +33,7 @@ export default function Emailverify() {
     try {
       var verifyToken = localStorage.getItem("verifyToken");
       const status = await axios.get(
-        `http://localhost:3005/pub/verify?token=${verifyToken}`
+        `https://quicker-backend-app.herokuapp.com/pub/verify?token=${verifyToken}`
       );
       console.log(status,"=====")
       if(status.status === 200) {
@@ -42,7 +42,7 @@ export default function Emailverify() {
       console.log("===", resp);
     } catch (err) {
       if (err?.response?.status === 500) {
-        console.log("something  went wrong");
+        console.log("something  went wrong"); 
       }
     }
   }, []);

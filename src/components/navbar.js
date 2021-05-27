@@ -36,10 +36,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   
-  button:{
-    fontSize:"20px",
-    fontWeight:"bold",
-    color:"#b71540"
+  buttom:{
+    fontSize:"2em" ,
+    // fontWeight:"bold",
+    // color:"#b71540"
   }
 }));
 
@@ -55,8 +55,8 @@ export default function Navbar() {
           <Typography variant="h3" className={classes.heading}>
             Quicker
           </Typography>
-           <Link to='/login'><Button>Login</Button></Link>
-           <Link to='/sign'><Button>Sign Up</Button></Link>
+           <Link to='/login' className={classes.buttom}><Button>Login</Button></Link>
+           <Link to='/sign' className={classes.buttom}><Button>Sign Up</Button></Link>
 
           {/*  */}
           {/* <Button className= {classes.button} href="/sign">Sign Up</Button> */}

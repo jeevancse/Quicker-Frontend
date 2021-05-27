@@ -67,7 +67,7 @@ export default function Sign() {
     e.preventDefault();
     try {
       const { email, password, confirmPassword } = state;
-      const resp = await axios.post("http://localhost:3005/pub/register", {
+      const resp = await axios.post(`https://quicker-backend-app.herokuapp.com/pub/register`, {
         email,
         password,
         confirmPassword,
